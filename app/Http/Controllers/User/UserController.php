@@ -12,7 +12,7 @@ class UserController extends Controller
 {
     //登录
     public function login(Request $request){
-        
+
         $name = $request->input('account');
         $pwd = $request->input('password');
         if(empty($name)){
@@ -21,7 +21,6 @@ class UserController extends Controller
         if(empty($pwd)){
             return '密码不能为空';
         }
-        var_dump($name);die;
         $data = UserModel::where('name',$name)->first();
         $data = json_decode($data,true);
         if($data['name'] == $name){
