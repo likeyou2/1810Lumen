@@ -12,6 +12,7 @@ class UserController extends Controller
 {
     //登录
     public function login(Request $request){
+        var_dump(111);die;
         $name = $request->input('account');
         $pwd = $request->input('password');
         if(empty($name)){
