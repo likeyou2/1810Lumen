@@ -20,6 +20,7 @@ class UserController extends Controller
         if(empty($pwd)){
             return '密码不能为空';
         }
+        var_dump($name);die;
         $data = UserModel::where('name',$name)->first();
         $data = json_decode($data,true);
         if($data['name'] == $name){
