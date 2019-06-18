@@ -12,8 +12,8 @@ class UserController extends Controller
 {
     //登录
     public function login(Request $request){
-        $name = $request->input('name');
-        $pwd = $request->input('pwd');
+        $name = $request->input('account');
+        $pwd = $request->input('password');
         if(empty($name)){
             return '账号不能为空';
         }
